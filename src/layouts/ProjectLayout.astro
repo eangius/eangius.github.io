@@ -2,6 +2,12 @@
 import BaseLayout from "./BaseLayout.astro";
 import { useTranslations, getLocale } from "../i18n/utils";
 
+interface ProjectLink {
+  slug: string;
+  title: string;
+  thumbnail?: string;
+}
+
 interface Props {
   title: string;
   summary: string;
@@ -9,9 +15,11 @@ interface Props {
   tags?: string[];
   repoUrl?: string;
   demoUrl?: string;
+  prevProject?: ProjectLink;
+  nextProject?: ProjectLink;
 }
 
-const { title, summary, thumbnail, tags = [], repoUrl, demoUrl } = Astro.props;
+const { title, summary, thumbnail, tags = [], repoUrl, demoUrl, prevProject, nextProject } = Astro.props;
 
 const lang = getLocale(Astro.currentLocale);
 const t = useTranslations(lang);
@@ -84,6 +92,53 @@ const t = useTranslations(lang);
     <div class="prose prose-neutral max-w-none dark:prose-invert">
       <slot />
     </div>
+
+    {
+      (prevProject || nextProject) && (
+        <nav class="mt-12 grid grid-cols-1 gap-4 border-t border-border pt-8 sm:grid-cols-2">
+          {prevProject && (
+            <a
+              href={`/projects/${prevProject.slug}/`}
+              id="project-prev-link"
+              class="group flex items-center gap-4 rounded-lg border border-border p-4 transition-shadow hover:shadow-lg"
+            >
+              <img
+                src={prevProject.thumbnail ?? "/images/projects/placeholder.svg"}
+                alt=""
+                width="80"
+                height="48"
+                loading="lazy"
+                class="h-12 w-20 flex-shrink-0 rounded object-cover"
+              />
+              <div>
+                <p class="text-xs text-text-muted">{t("projects.previous")}</p>
+                <p class="font-semibold text-text group-hover:text-accent">{prevProject.title}</p>
+              </div>
+            </a>
+          )}
+          {nextProject && (
+            <a
+              href={`/projects/${nextProject.slug}/`}
+              id="project-next-link"
+              class="group flex items-center justify-end gap-4 rounded-lg border border-border p-4 text-right transition-shadow hover:shadow-lg sm:col-start-2"
+            >
+              <div>
+                <p class="text-xs text-text-muted">{t("projects.next")}</p>
+                <p class="font-semibold text-text group-hover:text-accent">{nextProject.title}</p>
+              </div>
+              <img
+                src={nextProject.thumbnail ?? "/images/projects/placeholder.svg"}
+                alt=""
+                width="80"
+                height="48"
+                loading="lazy"
+                class="h-12 w-20 flex-shrink-0 rounded object-cover"
+              />
+            </a>
+          )}
+        </nav>
+      )
+    }
   </article>
 </BaseLayout>
 
@@ -106,6 +161,22 @@ const t = useTranslations(lang);
       window.posthog?.capture('project_demo_clicked', {
         project_title: projectTitle,
         project_slug: projectSlug,
+      });
+    });
+
+    document.getElementById('project-prev-link')?.addEventListener('click', () => {
+      window.posthog?.capture('project_nav_clicked', {
+        project_title: projectTitle,
+        project_slug: projectSlug,
+        direction: 'prev',
+      });
+    });
+
+    document.getElementById('project-next-link')?.addEventListener('click', () => {
+      window.posthog?.capture('project_nav_clicked', {
+        project_title: projectTitle,
+        project_slug: projectSlug,
+        direction: 'next',
       });
     });
   });

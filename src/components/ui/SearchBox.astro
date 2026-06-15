@@ -35,6 +35,14 @@ const t = useTranslations(getLocale(Astro.currentLocale));
     --pagefind-ui-font: var(--font-sans);
   }
 
+  /* Replace the OS-dependent default focus ring (can render black/gray
+     depending on the system accent color) by recoloring the existing
+     border to the theme accent — same dimensions, just highlighted */
+  .pagefind-search :global(.pagefind-ui__search-input:focus-visible) {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
   /* Float the results below the input instead of widening the header */
   .pagefind-search :global(.pagefind-ui__drawer) {
     position: absolute;

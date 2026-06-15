@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Probabilistic geocoder: the phrase &#39;near downtown&#39; resolves into three evenly-spaced, irregularly-shaped slate region layers viewed at a 45-degree angle — 61% at nhood, 88% at city, 99% at region — vertically centered on the query. An orange map pin marks the resolved location and a vertical line carries the estimate down through every layer, with the local footprint cast as a shadow onto the larger layers below.">
+  <polygon points="186.0,121.7 218.0,111.8 254.0,114.6 286.0,110.4 314.0,125.9 304.0,141.5 284.0,152.8 248.0,154.2 216.0,154.2 190.0,140.1" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.1" stroke-opacity="0.62" stroke-linejoin="round"></polygon>
+  <polygon points="232.0,125.9 250.0,121.7 264.0,127.3 272.0,123.1 272.0,133.0 260.0,135.8 266.0,141.5 244.0,141.5 234.0,134.4" fill="#94a3b8" fill-opacity="0.08" stroke="#94a3b8" stroke-width="0.9" stroke-opacity="0.45" stroke-dasharray="2.5 2.5" stroke-linejoin="round"></polygon>
+  <polygon points="206.0,103.1 236.0,96.0 264.0,100.3 290.0,97.4 296.0,113.0 278.0,118.7 290.0,127.1 256.0,130.0 228.0,124.3 210.0,114.4" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.1" stroke-opacity="0.62" stroke-linejoin="round"></polygon>
+  <polygon points="232.0,105.9 250.0,101.7 264.0,107.3 272.0,103.1 272.0,113.0 260.0,115.8 266.0,121.5 244.0,121.5 234.0,114.4" fill="#94a3b8" fill-opacity="0.08" stroke="#94a3b8" stroke-width="0.9" stroke-opacity="0.5" stroke-dasharray="2.5 2.5" stroke-linejoin="round"></polygon>
+  <polygon points="232.0,85.9 250.0,81.7 264.0,87.3 272.0,83.1 272.0,93.0 260.0,95.8 266.0,101.5 244.0,101.5 234.0,94.4" fill="#94a3b8" fill-opacity="0.2" stroke="#94a3b8" stroke-width="1.1" stroke-opacity="0.62" stroke-linejoin="round"></polygon>
+  <line x1="250" y1="93.0" x2="250" y2="133.0" stroke="#fe6e00" stroke-width="1.3" stroke-dasharray="2 2.6" stroke-opacity="0.55"></line>
+  <circle cx="250" cy="113.0" r="2.1" fill="#fe6e00" fill-opacity="0.85"></circle>
+  <circle cx="250" cy="133.0" r="2.1" fill="#fe6e00" fill-opacity="0.85"></circle>
+  <path d="M245.4 83.4 L250 93.0 L254.6 83.4 Z" fill="#fe6e00"></path>
+  <circle cx="250" cy="80.0" r="6" fill="#fe6e00"></circle>
+  <text x="322" y="96.5"><tspan font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="10" font-weight="400" fill="#aab3bd">61%</tspan><tspan dx="4" font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6b7886">@ nhood</tspan></text>
+  <text x="322" y="116.5"><tspan font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="10" font-weight="400" fill="#aab3bd">88%</tspan><tspan dx="4" font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6b7886">@ city</tspan></text>
+  <text x="322" y="136.5"><tspan font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="10" font-weight="400" fill="#aab3bd">99%</tspan><tspan dx="4" font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6b7886">@ region</tspan></text>
+  <text x="20" y="102" font-family="&#39;Open Sans&#39;,system-ui,sans-serif" font-size="8.5" font-weight="700" letter-spacing="0.16em" fill="#94a3b8">QUERY</text>
+  <text x="20" y="124" font-family="&#39;JetBrains Mono&#39;,&#39;SFMono-Regular&#39;,ui-monospace,monospace" font-size="13" font-weight="500" fill="#475569">“near downtown”</text>
+  <line x1="150" y1="118" x2="162" y2="118" stroke="#7c3aed" stroke-width="2.6" stroke-dasharray="3.5 4" stroke-linecap="round" opacity="0.92"></line>
+  <path d="M162 112 L173.5 118 L162 124" fill="none" stroke="#7c3aed" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>

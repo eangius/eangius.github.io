@@ -32,6 +32,8 @@ export const ui = {
     "projects.subtitle": "A selection of my works, experiments & prototypes:",
     "projects.viewRepo": "Source",
     "projects.viewDemo": "Live Demo",
+    "projects.previous": "Previous",
+    "projects.next": "Next",
 
     "search.placeholder": "Search the site...",
 

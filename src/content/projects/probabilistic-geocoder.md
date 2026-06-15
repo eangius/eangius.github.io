@@ -1,6 +1,7 @@
 ---
 title: "Probabilistic Geocoder"
 summary: "Resolves noisy, ambiguous & privacy-protected location references from web data into a best-effort polygon & confidence-weight."
+thumbnail: "/images/projects/probabilistic-geocoder.svg"
 tags: ["NLP", "Geospatial", "Probabilistic Modeling"]
 order: 5
 draft: false

@@ -11,8 +11,8 @@ draft: false
 
 When a deployed tree-based model (decision tree, random forest, boosted trees, ..)
 produces a bad prediction, an engineer needs to know what to do about it —
-ship a code fix, expensive re-train, design new features, or accept it as a domain
-edge case & move on. Feature vectors, model scores & raw inputs alone don't
+ship a code fix, expensive re-train, design new features, or explain why this is
+a tolerable edge-case. Feature vectors, model scores & raw inputs alone don't
 say which. This project is a model-debugging toolkit, pioneered before
 SHAP & perturbation-based explainability techniques became mainstream, which
 opened up the black box of any tree ensemble so anyone can triage a bad

@@ -3,16 +3,26 @@ import { getCollection, render } from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 
 export async function getStaticPaths() {
-  const projects = await getCollection("projects", ({ data }) => !data.draft);
+  const projects = (await getCollection("projects", ({ data }) => !data.draft)).sort(
+    (a, b) => a.data.order - b.data.order,
+  );
 
-  return projects.map((project) => ({
-    params: { slug: project.id },
-    props: { project },
-  }));
+  return projects.map((project, index) => {
+    const prev = projects.length > 1 ? projects[(index - 1 + projects.length) % projects.length] : undefined;
+    const next = projects.length > 1 ? projects[(index + 1) % projects.length] : undefined;
+
+    return {
+      params: { slug: project.id },
+      props: { project, prev, next },
+    };
+  });
 }
 
-const { project } = Astro.props;
+const { project, prev, next } = Astro.props;
 const { Content } = await render(project);
+
+const toProjectLink = (entry: typeof project | undefined) =>
+  entry && { slug: entry.id, title: entry.data.title, thumbnail: entry.data.thumbnail };
 ---
 
 <ProjectLayout
@@ -22,6 +32,8 @@ const { Content } = await render(project);
   tags={project.data.tags}
   repoUrl={project.data.repoUrl}
   demoUrl={project.data.demoUrl}
+  prevProject={toProjectLink(prev)}
+  nextProject={toProjectLink(next)}
 >
   <Content />
 </ProjectLayout>
