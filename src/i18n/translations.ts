@@ -18,11 +18,18 @@ export const ui = {
     "hero.cta.contact": "Get in Touch",
     "hero.cta.projects": "View Projects",
 
-    "skills.title": "Expertise",
-    "skills.subtitle": "Skills & technologies I specialize in.",
+    "about.title": "About",
+    "about.body":
+        "I work on creative & challenging data problems without clear answers — " +
+        "usually somewhere between maps, language & real-world behavior.\n" +
+        "I’m especially interested in the exploratory side of the work: " +
+        "shaping questions, experimenting quickly & engineering ideas into real solutions.",
+
+    "skills.title": "Skills",
+    "skills.subtitle": "Topics I specialize in & enjoy working on:",
 
     "projects.title": "Projects",
-    "projects.subtitle": "A selection of my works, experiments & prototypes.",
+    "projects.subtitle": "A selection of my works, experiments & prototypes:",
     "projects.viewRepo": "Source",
     "projects.viewDemo": "Live Demo",
 
