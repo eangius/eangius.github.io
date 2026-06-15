@@ -34,4 +34,21 @@ const t = useTranslations(getLocale(Astro.currentLocale));
     --pagefind-ui-border: var(--color-border);
     --pagefind-ui-font: var(--font-sans);
   }
+
+  /* Float the results below the input instead of widening the header */
+  .pagefind-search :global(.pagefind-ui__drawer) {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 60;
+    width: max(20rem, 100%);
+    max-height: 70vh;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  }
 </style>
