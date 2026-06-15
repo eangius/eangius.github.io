@@ -42,6 +42,7 @@ const t = useTranslations(lang);
               repoUrl && (
                 <a
                   href={repoUrl}
+                  id="project-repo-link"
                   target="_blank"
                   rel="noreferrer"
                   class="text-sm font-semibold text-accent hover:text-accent-hover"
@@ -54,6 +55,7 @@ const t = useTranslations(lang);
               demoUrl && (
                 <a
                   href={demoUrl}
+                  id="project-demo-link"
                   target="_blank"
                   rel="noreferrer"
                   class="text-sm font-semibold text-accent hover:text-accent-hover"
@@ -84,3 +86,27 @@ const t = useTranslations(lang);
     </div>
   </article>
 </BaseLayout>
+
+<script is:inline define:vars={{ projectTitle: title, projectTags: tags, projectSlug: Astro.url.pathname }}>
+  document.addEventListener('DOMContentLoaded', () => {
+    window.posthog?.capture('project_viewed', {
+      project_title: projectTitle,
+      project_tags: projectTags,
+      project_slug: projectSlug,
+    });
+
+    document.getElementById('project-repo-link')?.addEventListener('click', () => {
+      window.posthog?.capture('project_repo_clicked', {
+        project_title: projectTitle,
+        project_slug: projectSlug,
+      });
+    });
+
+    document.getElementById('project-demo-link')?.addEventListener('click', () => {
+      window.posthog?.capture('project_demo_clicked', {
+        project_title: projectTitle,
+        project_slug: projectSlug,
+      });
+    });
+  });
+</script>

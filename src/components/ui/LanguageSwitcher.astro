@@ -26,6 +26,7 @@ const options = Object.entries(languages).map(([code, label]) => ({
       <a
         href={href}
         aria-current={code === lang ? "true" : undefined}
+        data-lang-code={code}
         class="rounded-md px-2 py-1 font-semibold uppercase text-text-muted transition-colors aria-[current=true]:text-accent hover:text-accent"
         title={label}
       >
@@ -34,3 +35,16 @@ const options = Object.entries(languages).map(([code, label]) => ({
     ))
   }
 </nav>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-lang-code]').forEach((link) => {
+      link.addEventListener('click', () => {
+        const code = link.getAttribute('data-lang-code');
+        if (link.getAttribute('aria-current') !== 'true') {
+          window.posthog?.capture('language_switched', { language_code: code });
+        }
+      });
+    });
+  });
+</script>

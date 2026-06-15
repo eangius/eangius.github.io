@@ -39,12 +39,14 @@ const t = useTranslations(getLocale(Astro.currentLocale));
           href={meetingUrl}
           target="_blank"
           rel="noreferrer"
+          id="hero-contact-cta"
           class="rounded-md bg-accent px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
         >
           {t("hero.cta.contact")}
         </a>
         <a
           href="#projects"
+          id="hero-projects-cta"
           class="rounded-md border border-border px-5 py-2.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent"
         >
           {t("hero.cta.projects")}
@@ -53,3 +55,14 @@ const t = useTranslations(getLocale(Astro.currentLocale));
     </div>
   </div>
 </section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('hero-contact-cta')?.addEventListener('click', () => {
+      window.posthog?.capture('contact_cta_clicked');
+    });
+    document.getElementById('hero-projects-cta')?.addEventListener('click', () => {
+      window.posthog?.capture('projects_cta_clicked');
+    });
+  });
+</script>

@@ -44,6 +44,20 @@ npm run check && \
 npm run preview;
 ```
 
+## Analytics
+
+This site uses [PostHog](https://posthog.com) for cookieless, privacy-friendly
+visitor analytics (no cookie consent banner required).
+
+### Setup
+
+Define [posthog](https://us.posthog.com/project/471452/settings/project-details) keys in the gitignore `.env` file.
+
+```
+PUBLIC_POSTHOG_PROJECT_TOKEN=phc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+PUBLIC_POSTHOG_HOST=https://us.i.posthog.com
+```
+
 ## Adding content
 
 Projects are managed as Markdown files under `src/content/projects/`. To add a new

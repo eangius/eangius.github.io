@@ -18,7 +18,7 @@ const t = useTranslations(getLocale(Astro.currentLocale));
     if (typeof window.PagefindUI === "function") {
       new window.PagefindUI({
         element: "#search",
-        showSubResults: true,
+        showSubResults: false,
         translations: { placeholder },
       });
     }

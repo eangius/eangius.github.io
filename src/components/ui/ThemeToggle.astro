@@ -49,3 +49,10 @@ const t = useTranslations(getLocale(Astro.currentLocale));
     localStorage.setItem("theme", isDark ? "dark" : "light");
   });
 </script>
+
+<script is:inline>
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    window.posthog?.capture('theme_toggled', { theme: isDark ? 'dark' : 'light' });
+  });
+</script>
