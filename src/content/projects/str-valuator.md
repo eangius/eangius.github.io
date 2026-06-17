@@ -1,6 +1,7 @@
 ---
 title: "Vacation Rental Valuator"
 summary: "Appraises properties relative to their markets — trained on-demand allowing for what-if competitive analysis."
+thumbnail: "/images/projects/str-valuator.svg"
 tags: ["Simulation", "Explainability", "Ranking"]
 order: 2
 draft: false
