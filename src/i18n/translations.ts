@@ -22,7 +22,7 @@ export const ui = {
     "about.body":
         "I work on creative & challenging data problems without clear answers — " +
         "usually somewhere between maps, language & real-world behavior.\n" +
-        "I’m especially interested in the exploratory side of the work: " +
+        "I’m especially interested in the exploratory side & mvp delivery: " +
         "shaping questions, experimenting quickly & engineering ideas into real solutions.",
 
     "skills.title": "Skills",

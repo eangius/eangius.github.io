@@ -1,7 +1,7 @@
 ---
 title: "Geo Embeddings"
 summary: "Pre geo2Vec, learn representations of neighborhoods enabling semantic discovery & similarity search across different areas."
-thumbnail: "/images/projects/placeholder.svg"
+thumbnail: "/images/projects/geo-embeddings.svg"
 tags: ["embeddings", "geospatial", "semantics"]
 order: 7
 draft: false
@@ -28,7 +28,7 @@ Real estate developers & site-selection teams need to find locations similar to 
 
 ## Results
 * Semantic retrieval outperformed baseline cosine-similarity-on-raw-features in ranking quality against human judgments
-* Enabled vector arithmetic: e.g., Toronto − Distillery District + Montreal ≈ Outremont, showing the embeddings captured meaningful geographic "analogies"
+* Enabled vector arithmetic: e.g., Toronto − Yorkville + Montreal ≈ Outremont, showing the embeddings captured meaningful geographic "analogies"
 * Demoed to company: real estate developers specified successful locations and retrieved semantically similar candidates across different cities, validating the model discovered meaningful neighborhood analogues
 * Methodology proved portable: designed to scale from Canada POC to North American coverage with adjusted feature sets
 * Users could search by describing desired characteristics ("dense, walkable, cultural venues") without knowing which latent variables matter

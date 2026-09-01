@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Geo embeddings: the Toronto and Montreal vectors form a rhombus whose diagonal, minus the short Yorkville vector, resolves to the Outremont vector — Toronto minus Yorkville plus Montreal is approximately Outremont">
+  <defs>
+    <marker id="ge-ah-purple" viewBox="0 0 8 10" refX="0.5" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M0 1.4 L7.4 5 L0 8.6 Z" fill="#7c3aed"></path>
+    </marker>
+    <marker id="ge-ah-orange" viewBox="0 0 8 10" refX="0.5" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M0 1.4 L7.4 5 L0 8.6 Z" fill="#fe6e00"></path>
+    </marker>
+    <marker id="ge-ah-slate" viewBox="0 0 8 10" refX="0.5" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M0 1.4 L7.4 5 L0 8.6 Z" fill="#475569"></path>
+    </marker>
+  </defs>
+
+  <g fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 4" stroke-opacity="0.45" stroke-linecap="round">
+    <path d="M196 52 L304 118"></path>
+    <path d="M160 214 L304 118"></path>
+  </g>
+
+  <path d="M60 147.1 L295.4 119.0" fill="none" stroke="#475569" stroke-width="2.2" stroke-dasharray="7 5" stroke-opacity="0.7" stroke-linecap="round" marker-end="url(#ge-ah-slate)"></path>
+
+  <g fill="none" stroke="#7c3aed" stroke-width="2.4" stroke-linecap="round">
+    <path d="M58.7 143.6 L188.2 57.2" marker-end="url(#ge-ah-purple)"></path>
+    <path d="M58.8 152.2 L152.0 209.1" marker-end="url(#ge-ah-purple)"></path>
+  </g>
+
+  <g fill="none" stroke="#fe6e00" stroke-width="2.4" stroke-linecap="round">
+    <path d="M304 118 L314.2 141.4" marker-end="url(#ge-ah-orange)"></path>
+    <path d="M60 148.1 L308.6 149.9" marker-end="url(#ge-ah-orange)"></path>
+  </g>
+
+  <circle cx="52" cy="148" r="4.5" fill="#475569"></circle>
+
+  <g font-family="'Open Sans',system-ui,sans-serif" font-size="10" font-weight="600">
+    <text x="115" y="88" text-anchor="middle" fill="#7c3aed">Toronto</text>
+    <text x="94" y="198" text-anchor="middle" fill="#7c3aed">Montréal</text>
+    <text x="321" y="133" text-anchor="start" fill="#fe6e00">Yorkville</text>
+    <text x="228" y="145" text-anchor="middle" fill="#fe6e00">Outremont</text>
+  </g>
+
+  <text x="203" y="234" font-family="'Open Sans',system-ui,sans-serif" font-size="10" font-weight="400" fill="#aab3bd" text-anchor="middle">Toronto − Yorkville + Montréal ≈ Outremont </text>
+</svg>
