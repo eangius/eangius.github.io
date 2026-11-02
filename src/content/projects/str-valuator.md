@@ -14,7 +14,7 @@ worth — not just an absolute nightly rate, but how it ranks against
 comparable listings nearby. This project is an automated valuation model
 (AVM) that appraises a target property — using attributes like location,
 room counts, images, amenities & building type — & ranks its relative
-value within its market.
+value within its market. See [live demo](https://property-evaluator.web.app/)
 
 ## The Challenge
 
